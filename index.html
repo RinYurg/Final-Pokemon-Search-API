@@ -16,26 +16,31 @@
 	<div ng-app="pkmnApp" ng-controller="pokemonCtrl"> 
 
  <h1> Search For A Card </h1>
- 
+ <form>
  	<input type="text" id="search">
  	</p>
 
- 	<button ng-click="findPokemon()">Search!</button>
+ 	<button ng-click="findPokemon()">Search!</button></form>
 
  	<div class="pokemoncards" ng-repeat="x in outputField">
- 		
-			<h1>{{ x.id }}</h1></a>
+ 		<a href="{{ x.imageUrl }}/">
+			<a><h1>{{ x.name }}</h1></a>
 
-			<h4>{{ x.name }}</h4>
+			<h2>{{ x.nationalPokedexNumber }} </h2>
+
+			<h4>{{ x.id }}</h4>
+
+			<h4>{{ x.set }}</h4>
+
+			<h3> {{ x.rarity }} </h3>
 
 		</div>
 </div>
 
-</center>
 
 
 <script type="text/javascript" src="scripts/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 <script type="text/javascript" src="scripts/myscripts.js"></script>
 
 
