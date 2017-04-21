@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Search!</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+
+
+	<center>
+		<div id="header"><img src="images/header.jpg"></div>
+	</center>
+
+	<center> 
+	<div ng-app="pkmnApp" ng-controller="pokemonCtrl"> 
+
+ <h1> Search For A Card </h1>
+ 
+ 	<input type="text" id="search">
+ 	</p>
+
+ 	<button ng-click="findPokemon()">Search!</button>
+
+ 	<div class="pokemoncards" ng-repeat="x in outputField">
+ 		
+			<h1>{{ x.id }}</h1></a>
+
+			<h4>{{ x.name }}</h4>
+
+		</div>
+</div>
+
+</center>
+
+
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="scripts/myscripts.js"></script>
+
+
+</body>
+</html>
